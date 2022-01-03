@@ -1,0 +1,9 @@
+<h1 class="display-3">Player <u>{{playerInfo.Player1}}</u> VS <u>{{playerInfo.Player2}}</u></h1>
+
+<div *ngFor='let row of rows' class="row top-buffer">
+    <div *ngFor='let col of cols' class="col-6 col-md-4">
+        <div class="example-ripple-container mat-elevation-z4" (click)='chancePlay(row,col)' matRipple>
+
+        </div>
+    </div>
+</div>

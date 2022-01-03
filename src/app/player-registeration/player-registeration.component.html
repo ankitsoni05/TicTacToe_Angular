@@ -1,0 +1,13 @@
+<form [formGroup]="playerRegForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Player 1 Name</label>
+        <input type="text" class="form-control" placeholder="Player 1 Name" formControlName="Player1">
+        <div *ngIf="!(Player1?.untouched) && !(Player1?.valid)" id="emailHelp" class="form-text">Player Name is required.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1">Player 2 Name</label>
+        <input type="text" class="form-control" placeholder="Player 2 Name" formControlName="Player2">
+        <div *ngIf="!(Player2?.untouched) && !(Player2?.valid)" class="form-text">Player name is required.</div>
+    </div>
+    <button [disabled]="!playerRegForm.valid" type="submit" class="btn btn-primary">Start Game</button>
+</form>
